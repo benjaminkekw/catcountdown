@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+body {
+    font-family: 'Pacifico', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #FFEBEE;
+    color: #D81B60;
+    margin: 0;
+    background: url('https://i.pinimg.com/736x/b2/bf/1d/b2bf1d48874458164ce6551bdedff75b.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.countdown {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    width: 100%;
+    animation: fadeIn 2s;
+}
+
+.countdown h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #D81B60;
+}
+
+#timer {
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.timer-element {
+    display: inline-block;
+    min-width: 50px;
+    background: #F8BBD0;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.timer-element::before, .timer-element::after {
+    content: '';
+    position: absolute;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0% { left: -200%; top: 50%; }
+    50% { left: 50%; top: 50%; }
+    100% { left: 200%; top: 50%; }
+}
+
+.big-button {
+    font-size: 18px;
+    padding: 15px 30px;
+    border: none;
+    background-color: #e91e63;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.big-button:hover {
+    background-color: #c2185b;
+}
+
+.special-message {
+    display: none;
+    text-align: center;
+    background-color: #fff5f8;
+    border: 2px solid #ff69b4;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    font-family: 'Pacifico', cursive;
+    color: #ff1493;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
